@@ -1,0 +1,27 @@
+{{!< default}}
+{{> navigation}}
+{{> hamburgermenu}}
+<div id="blog">
+  <div id="homepageposts">
+    {{#foreach posts}}
+    <div class="homepage-post-wrapper">
+      <div class="homepage-post-image">
+        <img src="{{feature_image}}">
+      </div>
+      <div class="homepage-post-info-wrapper">
+        <div class="homepage-post-info">
+            <a href={{url}} class="titlelink">
+              <div class="homepage-post-title">
+              {{title}}
+              </div>
+            </a>
+            <div class="homepage-post-excerpt">
+              {{excerpt}}... <a href={{url}} class="readmore">Read more</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    {{/foreach}}
+  </div>
+  {{pagination}}
+</div>

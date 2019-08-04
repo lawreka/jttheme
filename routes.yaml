@@ -1,0 +1,42 @@
+routes:
+  /:
+    template: home
+  /bio/:
+    template: page
+    data:
+      post:
+        resource: posts
+        type: read
+        slug: bio
+  /media/:
+    template: page
+    data:
+      post:
+        resource: posts
+        type: read
+        slug: media
+  /music/:
+    template: page
+    data:
+      post:
+        resource: posts
+        type: read
+        slug: music
+  /contact/:
+    template: page
+    data:
+      post:
+        resource: posts
+        type: read
+        slug: contact
+  /blog/:
+    template: index
+    data:
+      post:
+        resource: posts
+        type: read
+
+collections:
+  /blog/:
+    permalink: /blog/{slug}/
+    template: index
